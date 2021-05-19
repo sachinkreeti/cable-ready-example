@@ -1,4 +1,5 @@
 import consumer from "./consumer";
+import cableReady from "cable_ready";
 
 consumer.subscriptions.create("CardChannel", {
   connected() {
