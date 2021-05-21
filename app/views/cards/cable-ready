@@ -1,0 +1,14 @@
+bundle add cable_ready
+yarn add cable_ready
+
+rails g channel Card
+stream_from "cards"
+
+cable_ready["cards].set_style(
+  selector: "#card_1",
+  name: "background",
+  value: "red"
+)
+
+
+What are the things we can do with cable-ready.
